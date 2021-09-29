@@ -10,31 +10,26 @@ import ContactForm from './components/ContactForm/ContactForm';
 function App() {
   const [selection, setSelection] = useState('blogForm');
 
-let html;
+  let html;
 
-if(selection === 'blogForm') {
-  html = <BlogPostForm />
-} else {
-  html = <ContactForm />
-} else {
-  html = <BlogReadingApp />
-} else {
-  html = <BookMarkingApp />
-} else {
-  html = <BlogAppFull />
-}};
+  if (selection === 'blogForm') {
+    html = <BlogPostForm />
+  } else {
+    html = <ContactForm />
+  } else 
+  }
 
 
   return (
     <div className="App">
+    
     <header>
       <button type="button" onClick={() => setSelection('blogForm')}>Blog Form</button>
       <button type="button" onClick={() => setSelection('contactForm')}>Contact Form</button>
     </header>
 
-
     </div>
   );
-}
+};
 
 export default App;
