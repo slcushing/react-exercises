@@ -46,9 +46,13 @@ function ContactForm() {
     return (
         <li>
             <form onSubmit={handleSubmit}>
-                <input name="text" type="text" id="first-name" value={firstName} onChange={handleNewFirstName}/> 
+                <label forHTML="first-name">First Name</label>
+                <input name="text" type="text" id="first-name" value={firstName} onChange={handleNewFirstName}/>
+                <label forHTML="last-name">Last Name</label>
                 <input name="text" type="text" id="last-name" value={lastName} onChange={handleNewLastName}/>
+                <label forHTML="address">Address</label>
                 <input name="text" type="text" id="address" value={address} onChange={handleNewAddress}/>
+                <label forHTML="phone-number">Phone Number</label>
                 <input name="text" type="text" id="phone-number" value={phoneNumber} onChange={handleNewPhoneNumber}/>
                 <button type="button">Submit</button>
             </form>

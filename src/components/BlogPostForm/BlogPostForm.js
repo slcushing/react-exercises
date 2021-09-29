@@ -40,8 +40,8 @@ function BlogPostForm(prop) {
     
     return (
         <form onSubmit={handleSubmit}>
-            <input name="text" type="text" id="new-blog-title" value={title} onChange={handleNewTitle}/>
-            <input name="text" type="text" id="new-blog-body" value={body} onChange={handleNewBody}/>
+            <input name="text" type="text" id="new-blog-title" value={title} onChange={handleNewTitle} placeholder="Blog Title"/>
+            <input name="text" type="text" id="new-blog-body" value={body} onChange={handleNewBody} placeholder="Blog Post Body"/>
             <button type="button">Add Post</button>
         </form>
     )
