@@ -12,7 +12,7 @@ function BlogPostForm(prop) {
     
     useEffect(() => {
         localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-    }, [blogPosts]);
+    }, [blogPosts]); //dependency array is blogPost
 
     // function addBlogPost(text) {
     // }
@@ -44,8 +44,6 @@ function BlogPostForm(prop) {
             <input name="text" type="text" id="new-blog-body" value={body} onChange={handleNewBody}/>
             <button type="button">Add Post</button>
         </form>
-        
-        
     )
 }
 
