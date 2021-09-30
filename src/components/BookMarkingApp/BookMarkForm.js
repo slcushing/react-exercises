@@ -1,25 +1,26 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 
-function BookMarkForm() {
-    const [bookmarks, setBookmarks] = useState ([])
+function BookMarkForm(props) {
+    // const [bookmarks, setBookmarks] = useState ([])
     const [url, setURL] = useState('')
     const [title, setTitle] = useState('')
     const [tag, setTag] = useState('')
-    const [counter, setCounter] = useState(0)
+    // const [counter, setCounter] = useState(0)
 
-    useEffect(() => {
-        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-    }, [bookmarks]);
+    // useEffect(() => {
+    //     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    // }, [bookmarks]);
 
-    useEffect(() => {
-        setBookmarks(JSON.parse(localStorage.getItem('bookmarks')));
-    }, []);
+    // useEffect(() => {
+    //     setBookmarks(JSON.parse(localStorage.getItem('bookmarks')));
+    // }, []);
     
     function handleSubmit(event) {
         event.preventDefault();
-        const newBookmark = {id:counter, url, title, tag}
-        setBookmarks([...bookmarks, newBookmark]);
-        setCounter(counter + 1);
+        props.addBookmark(url,title,tag)
+        // const newBookmark = {id:counter, url, title, tag}
+        // setBookmarks([...bookmarks, newBookmark]);
+        // setCounter(counter + 1);
         setURL('');
         setTitle('');
         setTag('');

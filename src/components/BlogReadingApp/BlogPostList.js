@@ -3,17 +3,17 @@
 
 function BlogPostList(props) {
     
-    const titles = props.posts.map(post => {
+    const titlesHTML = props.posts.map(post => {
         return (
             <li key={post.id}>
-                <button type="button" onClick={() => props.posts.value(props.id)}>{post.title}</button> 
+                <button type="button">{post.title}</button> 
             </li>
         )
     });
     
     return (
         <aside>
-            <ul>{titles}</ul>
+            <ul>{titlesHTML}</ul>
         </aside>
     )
 

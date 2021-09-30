@@ -6,7 +6,6 @@ import BlogPreview from './BlogPreview';
 import BlogPostList from './BlogPostList';
 
 function BlogReadingApp() {
-
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
