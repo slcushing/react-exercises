@@ -1,6 +1,14 @@
+
+import BlogList from './BlogList'
+import BlogForm from './BlogForm'
+
+
 function BlogAppFull() {
     return (
-        <div>I am the blog app full!</div>
+        <div>
+            <BlogList />
+            <BlogForm />
+        </div>
     )
 }
 
