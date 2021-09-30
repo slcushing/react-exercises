@@ -43,7 +43,7 @@ function BookMarkForm(props) {
             <input name="url" type="url" id="new-url" value={url} onChange={handleNewURL} placeholder="URL"/>
             <input name="text" type="text" id="new-title" value={title} onChange={handleNewTitle} placeholder="Title"/>
             <input name="text" type="text" id="new-tag" value={tag} onChange={handleNewTag} placeholder="Tag"/>
-            <button type="button">Add Bookmark</button>
+            <button type="submit">Add Bookmark</button>
 
         </form>
     )

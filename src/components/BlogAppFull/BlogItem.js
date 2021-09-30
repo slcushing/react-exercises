@@ -29,6 +29,8 @@ function BlogItem(props) {
 
     const previewHTML = (
         <>
+        <p>{props.title}</p>
+        <p>{props.body}</p>
         <button type="button" onClick={() => setIsEditing(true)}>Edit Post</button>
         <button type="button" onClick={() => props.deletePost(props.id)}>Delete Post</button>
         </>

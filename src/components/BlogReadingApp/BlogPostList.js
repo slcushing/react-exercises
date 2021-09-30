@@ -6,7 +6,7 @@ function BlogPostList(props) {
     const titlesHTML = props.posts.map(post => {
         return (
             <li key={post.id}>
-                <button type="button">{post.title}</button> 
+                <button type="button" onClick={() => props.selectPost(post.id)}>{post.title}</button> 
             </li>
         )
     });

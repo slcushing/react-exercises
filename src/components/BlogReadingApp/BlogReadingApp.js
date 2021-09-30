@@ -7,6 +7,7 @@ import BlogPostList from './BlogPostList';
 
 function BlogReadingApp() {
     const [posts, setPosts] = useState([]);
+    const [selection, setSelection] = useState();
 
     useEffect(() => {
         setPosts([
@@ -31,22 +32,20 @@ function BlogReadingApp() {
     }, []);
 
 
-    ///////not sure if this section should go in here or in BlogPreview/////////
-    // const [selection, setSelection] = useState({})
+  let post;
+  if(selection) {
+      post = posts.find(post => post.id === selection);
+  }
 
-    // function displayBlog(id) {
-    //     let index = posts.findIndex((element) => element.id === id);
-    //     const selectedPost = posts[index];
-    //     setSelection(selectedPost);
-    // }
-    ////////////////////////////////////////////////////////////////////////////////
-
-
+    function selectPost(id) {
+        setSelection(id);
+    }
+    
 
     return (
         <main>
-            <BlogPreview />
-            <BlogPostList posts={posts}/>
+            {selection && <BlogPreview post={post} />}
+            <BlogPostList posts={posts} selectPost={selectPost}/>
         </main>
     )
 }
