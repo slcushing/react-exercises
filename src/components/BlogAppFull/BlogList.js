@@ -1,11 +1,14 @@
+import BlogItem from './BlogItem'
 
+function BlogList(props) {
 
-function BlogList() {
-
+    const postHTML = props.posts.map(post =>
+        <BlogItem key={post.id} {...post} editPost={props.editPost} deletePost = {props.deletePost} />
+        )
 
     return(
         <ul>
-            Dis a blog list.
+            {postHTML}
         </ul>
     )
 }
